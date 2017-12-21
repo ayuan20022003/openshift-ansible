@@ -86,6 +86,25 @@
     - "{{ quickstarts_base }}/cakephp.json"
     - "{{ quickstarts_base }}/dancer.json"
     - "{{ quickstarts_base }}/django.json"
+    - "{{ quickstarts_base }}/amp.yml"
+    - "{{ quickstarts_base }}/pvc.yml"
+    - "{{ quickstarts_base }}/apicast-gateway-template.yml"
+    - "{{ quickstarts_base }}/apicast.yml"
+    - "{{ quickstarts_base }}/cakephp-mysql.json"
+    - "{{ quickstarts_base }}/cakephp-mysql-persistent.json"
+    - "{{ quickstarts_base }}/dancer-mysql.json"
+    - "{{ quickstarts_base }}/dancer-mysql-persistent.json"
+    - "{{ quickstarts_base }}/django-postgresql.json"
+    - "{{ quickstarts_base }}/django-postgresql-persistent.json"
+    - "{{ quickstarts_base }}/dotnet-example.json"
+    - "{{ quickstarts_base }}/dotnet-pgsql-persistent.json"
+    - "{{ quickstarts_base }}/dotnet-runtime-example.json"
+    - "{{ quickstarts_base }}/httpd.json"
+    - "{{ quickstarts_base }}/nodejs-mongodb.json"
+    - "{{ quickstarts_base }}/nodejs-mongodb-persistent.json"
+    - "{{ quickstarts_base }}/rails-postgresql.json"
+    - "{{ quickstarts_base }}/rails-postgresql-persistent.json"
+    - "{{ quickstarts_base }}/wildcard.yml"
 
 - name: Remove defunct quickstart templates from openshift namespace
   command: "{{ openshift.common.client_binary }} --config={{ openshift.common.config_base }}/master/admin.kubeconfig -n openshift delete templates/{{ item }}"
@@ -94,6 +113,23 @@
     - cakephp-example
     - dancer-example
     - django-example
+    - cakephp-mysql-example
+    - cakephp-mysql-persistent
+    - dancer-mysql-example
+    - dancer-mysql-persistent
+    - django-psql-example
+    - django-psql-persistent
+    - dotnet-example
+    - dotnet-pgsql-persistent
+    - dotnet-runtime-example
+    - nodejs-mongo-persistent
+    - nodejs-mongodb-example
+    - rails-pgsql-persistent
+    - rails-postgresql-example
+    - 3scale-gateway
+    - amp-apicast-wildcard-router
+    - amp-pvc
+    - system
   register: oex_delete_defunct_quickstart_templates
   failed_when: "'not found' not in oex_delete_defunct_quickstart_templates.stderr and oex_delete_defunct_quickstart_templates.rc != 0"
   changed_when: false
