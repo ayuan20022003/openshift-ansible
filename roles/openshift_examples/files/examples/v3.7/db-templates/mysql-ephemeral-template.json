@@ -5,16 +5,16 @@
     "name": "mysql-ephemeral",
     "annotations": {
       "openshift.io/display-name": "MySQL (Ephemeral)",
-      "description": "MySQL database service, without persistent storage. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/mysql-container/blob/master/5.7/README.md.\n\nWARNING: Any data stored will be lost upon pod destruction. Only use this template for testing",
+      "description": "MySQL 数据库服务, 不带持久化存储. 关于使用该模板的更多信息, 包括一些OpenShift注意事项, 见 https://github.com/sclorg/mysql-container/blob/master/5.7/README.md.\n\n警告: 任何数据都会随着POD的销毁而丢失. 该模板只用于测试.",
       "iconClass": "icon-mysql-database",
       "tags": "database,mysql",
-      "template.openshift.io/long-description": "This template provides a standalone MySQL server with a database created.  The database is not stored on persistent storage, so any restart of the service will result in all data being lost.  The database name, username, and password are chosen via parameters when provisioning this service.",
+      "template.openshift.io/long-description": "该模板提供了一个独立的MySQL服务器，并创建了一个数据库.  数据库没有持久化, 所以服务重启会导致所有数据丢失. 数据库名称, 用户名和密码在服务启动时通过参数传递.",
       "template.openshift.io/provider-display-name": "Red Hat, Inc.",
       "template.openshift.io/documentation-url": "https://docs.openshift.org/latest/using_images/db_images/mysql.html",
       "template.openshift.io/support-url": "https://access.redhat.com"
     }
   },
-  "message": "The following service(s) have been created in your project: ${DATABASE_SERVICE_NAME}.\n\n       Username: ${MYSQL_USER}\n       Password: ${MYSQL_PASSWORD}\n  Database Name: ${MYSQL_DATABASE}\n Connection URL: mysql://${DATABASE_SERVICE_NAME}:3306/\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/mysql-container/blob/master/5.7/README.md.",
+  "message": "在您的项目中创建了以下服务: ${DATABASE_SERVICE_NAME}.\n\n       Username: ${MYSQL_USER}\n       Password: ${MYSQL_PASSWORD}\n  Database Name: ${MYSQL_DATABASE}\n Connection URL: mysql://${DATABASE_SERVICE_NAME}:3306/\n\n关于使用该模板的更多信息, 包括一些OpenShift注意事项, 见 https://github.com/sclorg/mysql-container/blob/master/5.7/README.md.",
   "labels": {
     "template": "mysql-ephemeral-template"
   },
@@ -214,27 +214,27 @@
     {
       "name": "MEMORY_LIMIT",
       "displayName": "Memory Limit",
-      "description": "Maximum amount of memory the container can use.",
+      "description": "容器可使用的最大内存.",
       "value": "512Mi",
       "required": true
     },
     {
       "name": "NAMESPACE",
       "displayName": "Namespace",
-      "description": "The OpenShift Namespace where the ImageStream resides.",
+      "description": "ImageStream所在的OpenShift命名空间.",
       "value": "openshift"
     },
     {
       "name": "DATABASE_SERVICE_NAME",
       "displayName": "Database Service Name",
-      "description": "The name of the OpenShift Service exposed for the database.",
+      "description": "为数据库暴露的OpenShift服务的名称.",
       "value": "mysql",
       "required": true
     },
     {
       "name": "MYSQL_USER",
       "displayName": "MySQL Connection Username",
-      "description": "Username for MySQL user that will be used for accessing the database.",
+      "description": "用于访问数据库的MySQL用户名.",
       "generate": "expression",
       "from": "user[A-Z0-9]{3}",
       "required": true
@@ -242,7 +242,7 @@
     {
       "name": "MYSQL_PASSWORD",
       "displayName": "MySQL Connection Password",
-      "description": "Password for the MySQL connection user.",
+      "description": "MySQL连接用户的密码.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
       "required": true
@@ -250,7 +250,7 @@
     {
       "name": "MYSQL_ROOT_PASSWORD",
       "displayName": "MySQL root user Password",
-      "description": "Password for the MySQL root user.",
+      "description": "MySQL root用户的密码.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
       "required": true
@@ -258,14 +258,14 @@
     {
       "name": "MYSQL_DATABASE",
       "displayName": "MySQL Database Name",
-      "description": "Name of the MySQL database accessed.",
+      "description": "访问的MySQL数据库的名称.",
       "value": "sampledb",
       "required": true
     },
     {
       "name": "MYSQL_VERSION",
       "displayName": "Version of MySQL Image",
-      "description": "Version of MySQL image to be used (5.5, 5.6, 5.7, or latest).",
+      "description": "MySQL镜像的版本(5.5, 5.6, 5.7, or latest).",
       "value": "5.7",
       "required": true
     }

@@ -5,16 +5,16 @@
     "name": "mongodb-ephemeral",
     "annotations": {
       "openshift.io/display-name": "MongoDB (Ephemeral)",
-      "description": "MongoDB database service, without persistent storage. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/mongodb-container/blob/master/3.2/README.md.\n\nWARNING: Any data stored will be lost upon pod destruction. Only use this template for testing",
+      "description": "MongoDB 数据库服务, 没有持久化存储. 关于使用该模板的更多信息, 包括一些OpenShift的注意事项, 详见 https://github.com/sclorg/mongodb-container/blob/master/3.2/README.md.\n\n警告: 任何数据都会随着POD的销毁而丢失.该模板仅用于测试.",
       "iconClass": "icon-mongodb",
       "tags": "database,mongodb",
-      "template.openshift.io/long-description": "This template provides a standalone MongoDB server with a database created.  The database is not stored on persistent storage, so any restart of the service will result in all data being lost.  The database name, username, and password are chosen via parameters when provisioning this service.",
+      "template.openshift.io/long-description": "该模板提供了一个独立的MongoDB服务器，并创建了一个数据库.  数据库不存储在持久存储中，因此重新启动服务会导致所有数据丢失.  数据库名称，用户名和密码在服务启动时通过参数设置.",
       "template.openshift.io/provider-display-name": "Red Hat, Inc.",
       "template.openshift.io/documentation-url": "https://docs.openshift.org/latest/using_images/db_images/mongodb.html",
       "template.openshift.io/support-url": "https://access.redhat.com"
     }
   },
-  "message": "The following service(s) have been created in your project: ${DATABASE_SERVICE_NAME}.\n\n       Username: ${MONGODB_USER}\n       Password: ${MONGODB_PASSWORD}\n  Database Name: ${MONGODB_DATABASE}\n Connection URL: mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@${DATABASE_SERVICE_NAME}/${MONGODB_DATABASE}\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/mongodb-container/blob/master/3.2/README.md.",
+  "message": "在您的项目中创建了以下服务: ${DATABASE_SERVICE_NAME}.\n\n       Username: ${MONGODB_USER}\n       Password: ${MONGODB_PASSWORD}\n  Database Name: ${MONGODB_DATABASE}\n Connection URL: mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@${DATABASE_SERVICE_NAME}/${MONGODB_DATABASE}\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/mongodb-container/blob/master/3.2/README.md.",
   "labels": {
     "template": "mongodb-ephemeral-template"
   },
@@ -213,27 +213,27 @@
     {
       "name": "MEMORY_LIMIT",
       "displayName": "Memory Limit",
-      "description": "Maximum amount of memory the container can use.",
+      "description": "容器能够使用的最大内存.",
       "value": "512Mi",
       "required": true
     },
     {
       "name": "NAMESPACE",
       "displayName": "Namespace",
-      "description": "The OpenShift Namespace where the ImageStream resides.",
+      "description": "ImageStream所在的OpenShift名称空间",
       "value": "openshift"
     },
     {
       "name": "DATABASE_SERVICE_NAME",
       "displayName": "Database Service Name",
-      "description": "The name of the OpenShift Service exposed for the database.",
+      "description": "为数据库暴露的OpenShift服务的名称.",
       "value": "mongodb",
       "required": true
     },
     {
       "name": "MONGODB_USER",
       "displayName": "MongoDB Connection Username",
-      "description": "Username for MongoDB user that will be used for accessing the database.",
+      "description": "MongoDB用户的用户名，将用于访问数据库.",
       "generate": "expression",
       "from": "user[A-Z0-9]{3}",
       "required": true
@@ -241,7 +241,7 @@
     {
       "name": "MONGODB_PASSWORD",
       "displayName": "MongoDB Connection Password",
-      "description": "Password for the MongoDB connection user.",
+      "description": "MongoDB连接用户的密码.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
       "required": true
@@ -249,14 +249,14 @@
     {
       "name": "MONGODB_DATABASE",
       "displayName": "MongoDB Database Name",
-      "description": "Name of the MongoDB database accessed.",
+      "description": "访问的MongoDB数据库的名称.",
       "value": "sampledb",
       "required": true
     },
     {
       "name": "MONGODB_ADMIN_PASSWORD",
       "displayName": "MongoDB Admin Password",
-      "description": "Password for the database admin user.",
+      "description": "数据库管理用户的密码",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
       "required": true
@@ -264,7 +264,7 @@
     {
       "name": "MONGODB_VERSION",
       "displayName": "Version of MongoDB Image",
-      "description": "Version of MongoDB image to be used (2.4, 2.6, 3.2 or latest).",
+      "description": "使用的MongoDB镜像版本(2.4、2.6、3.2或最新版本)",
       "value": "3.2",
       "required": true
     }

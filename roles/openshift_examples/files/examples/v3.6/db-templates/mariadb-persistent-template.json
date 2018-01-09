@@ -5,16 +5,16 @@
     "name": "mariadb-persistent",
     "annotations": {
       "openshift.io/display-name": "MariaDB (Persistent)",
-      "description": "MariaDB database service, with persistent storage. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/mariadb-container/blob/master/10.1/README.md.\n\nNOTE: Scaling to more than one replica is not supported. You must have persistent volumes available in your cluster to use this template.",
+      "description": "MariaDB 数据库服务, 带持久化存储. 更多的使用该模板的信息，包括OpenShift的一些注意事项, 可以看 https://github.com/sclorg/mariadb-container/blob/master/10.1/README.md.\n\n注意: 不支持扩展多个副本. 要使用该模板，集群中必须有可用的持久化存储卷.",
       "iconClass": "icon-mariadb",
       "tags": "database,mariadb",
-      "template.openshift.io/long-description": "This template provides a standalone MariaDB server with a database created.  The database is stored on persistent storage.  The database name, username, and password are chosen via parameters when provisioning this service.",
+      "template.openshift.io/long-description": "该模板提供了一个独立的MariaDB服务器，并创建了一个数据库. 数据库存储在持久化存储中. 数据库名称，用户名和密码在启动时通过参数传递.",
       "template.openshift.io/provider-display-name": "Red Hat, Inc.",
       "template.openshift.io/documentation-url": "https://github.com/sclorg/mariadb-container/blob/master/10.1/README.md",
       "template.openshift.io/support-url": "https://access.redhat.com"
     }
   },
-  "message": "The following service(s) have been created in your project: ${DATABASE_SERVICE_NAME}.\n\n       Username: ${MYSQL_USER}\n       Password: ${MYSQL_PASSWORD}\n  Database Name: ${MYSQL_DATABASE}\n Connection URL: mysql://${DATABASE_SERVICE_NAME}:3306/\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/mariadb-container/blob/master/10.1/README.md.",
+  "message": "在您的项目中创建了以下服务: ${DATABASE_SERVICE_NAME}.\n\n       Username: ${MYSQL_USER}\n       Password: ${MYSQL_PASSWORD}\n  Database Name: ${MYSQL_DATABASE}\n Connection URL: mysql://${DATABASE_SERVICE_NAME}:3306/\n\n关于使用该模板的更多信息, 包括一些OpenShift注意事项, 见 https://github.com/sclorg/mariadb-container/blob/master/10.1/README.md.",
   "labels": {
     "template": "mariadb-persistent-template"
   },
@@ -212,27 +212,27 @@
     {
       "name": "MEMORY_LIMIT",
       "displayName": "Memory Limit",
-      "description": "Maximum amount of memory the container can use.",
+      "description": "容器能使用的最大内存.",
       "value": "512Mi",
       "required": true
     },
     {
       "name": "NAMESPACE",
       "displayName": "Namespace",
-      "description": "The OpenShift Namespace where the ImageStream resides.",
+      "description": "ImageStream所在的OpenShift命名空间",
       "value": "openshift"
     },
     {
       "name": "DATABASE_SERVICE_NAME",
       "displayName": "Database Service Name",
-      "description": "The name of the OpenShift Service exposed for the database.",
+      "description": "为数据库暴露的OpenShift服务的名称",
       "value": "mariadb",
       "required": true
     },
     {
       "name": "MYSQL_USER",
       "displayName": "MariaDB Connection Username",
-      "description": "Username for MariaDB user that will be used for accessing the database.",
+      "description": "用于访问数据库的MariaDB用户的用户名",
       "generate": "expression",
       "from": "user[A-Z0-9]{3}",
       "required": true
@@ -240,7 +240,7 @@
     {
       "name": "MYSQL_PASSWORD",
       "displayName": "MariaDB Connection Password",
-      "description": "Password for the MariaDB connection user.",
+      "description": "MariaDB连接用户的密码.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
       "required": true
@@ -248,7 +248,7 @@
     {
       "name": "MYSQL_ROOT_PASSWORD",
       "displayName": "MariaDB root Password",
-      "description": "Password for the MariaDB root user.",
+      "description": "MariaDB root用户的密码.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
       "required": true
@@ -256,14 +256,14 @@
     {
       "name": "MYSQL_DATABASE",
       "displayName": "MariaDB Database Name",
-      "description": "Name of the MariaDB database accessed.",
+      "description": "访问的MariaDB数据库的名称.",
       "value": "sampledb",
       "required": true
     },
     {
       "name": "VOLUME_CAPACITY",
       "displayName": "Volume Capacity",
-      "description": "Volume space available for data, e.g. 512Mi, 2Gi.",
+      "description": "可用的数据卷容量, 比如 512Mi, 2Gi.",
       "value": "1Gi",
       "required": true
     }

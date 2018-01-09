@@ -5,16 +5,16 @@
     "name": "postgresql-ephemeral",
     "annotations": {
       "openshift.io/display-name": "PostgreSQL (Ephemeral)",
-      "description": "PostgreSQL database service, without persistent storage. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/postgresql-container/blob/master/9.5.\n\nWARNING: Any data stored will be lost upon pod destruction. Only use this template for testing",
+      "description": "PostgreSQL 数据库服务, 不带持久化存储. 关于使用该模板的更多信息, 包括一些OpenShift注意事项, 见 https://github.com/sclorg/postgresql-container/blob/master/9.5.\n\n警告: 任何数据都会随着POD的销毁而丢失. 该模板只用于测试.",
       "iconClass": "icon-postgresql",
       "tags": "database,postgresql",
-      "template.openshift.io/long-description": "This template provides a standalone PostgreSQL server with a database created.  The database is not stored on persistent storage, so any restart of the service will result in all data being lost.  The database name, username, and password are chosen via parameters when provisioning this service.",
+      "template.openshift.io/long-description": "该模板提供了一个独立的MySQL服务器，并创建了一个数据库.  数据库没有持久化, 所以服务重启会导致所有数据丢失. 数据库名称, 用户名和密码在服务启动时通过参数传递.",
       "template.openshift.io/provider-display-name": "Red Hat, Inc.",
       "template.openshift.io/documentation-url": "https://docs.openshift.org/latest/using_images/db_images/postgresql.html",
       "template.openshift.io/support-url": "https://access.redhat.com"
     }
   },
-  "message": "The following service(s) have been created in your project: ${DATABASE_SERVICE_NAME}.\n\n       Username: ${POSTGRESQL_USER}\n       Password: ${POSTGRESQL_PASSWORD}\n  Database Name: ${POSTGRESQL_DATABASE}\n Connection URL: postgresql://${DATABASE_SERVICE_NAME}:5432/\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/postgresql-container/blob/master/9.5.",
+  "message": "在您的项目中创建了以下服务: ${DATABASE_SERVICE_NAME}.\n\n       Username: ${POSTGRESQL_USER}\n       Password: ${POSTGRESQL_PASSWORD}\n  Database Name: ${POSTGRESQL_DATABASE}\n Connection URL: postgresql://${DATABASE_SERVICE_NAME}:5432/\n\n关于使用该模板的更多信息, 包括一些OpenShift注意事项, 见 https://github.com/sclorg/postgresql-container/blob/master/9.5.",
   "labels": {
     "template": "postgresql-ephemeral-template"
   },
@@ -202,27 +202,27 @@
     {
       "name": "MEMORY_LIMIT",
       "displayName": "Memory Limit",
-      "description": "Maximum amount of memory the container can use.",
+      "description": "容器可使用的最大内存.",
       "value": "512Mi",
       "required": true
     },
     {
       "name": "NAMESPACE",
       "displayName": "Namespace",
-      "description": "The OpenShift Namespace where the ImageStream resides.",
+      "description": "ImageStream所在的OpenShift命名空间.",
       "value": "openshift"
     },
     {
       "name": "DATABASE_SERVICE_NAME",
       "displayName": "Database Service Name",
-      "description": "The name of the OpenShift Service exposed for the database.",
+      "description": "为数据库暴露的OpenShift服务的名称.",
       "value": "postgresql",
       "required": true
     },
     {
       "name": "POSTGRESQL_USER",
       "displayName": "PostgreSQL Connection Username",
-      "description": "Username for PostgreSQL user that will be used for accessing the database.",
+      "description": "用于访问数据库的PostgreSQL用户名.",
       "generate": "expression",
       "from": "user[A-Z0-9]{3}",
       "required": true
@@ -230,7 +230,7 @@
     {
       "name": "POSTGRESQL_PASSWORD",
       "displayName": "PostgreSQL Connection Password",
-      "description": "Password for the PostgreSQL connection user.",
+      "description": "PostgreSQL连接用户的密码.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
       "required": true
@@ -238,14 +238,14 @@
     {
       "name": "POSTGRESQL_DATABASE",
       "displayName": "PostgreSQL Database Name",
-      "description": "Name of the PostgreSQL database accessed.",
+      "description": "访问的PostgreSQL数据库的名称.",
       "value": "sampledb",
       "required": true
     },
     {
       "name": "POSTGRESQL_VERSION",
       "displayName": "Version of PostgreSQL Image",
-      "description": "Version of PostgreSQL image to be used (9.2, 9.4, 9.5 or latest).",
+      "description": "PostgreSQL镜像的版本(9.2, 9.4, 9.5 or latest).",
       "value": "9.5",
       "required": true
     }

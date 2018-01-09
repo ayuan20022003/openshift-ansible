@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: "registry-console"
   annotations:
-    description: "Template for deploying registry web console. Requires cluster-admin."
+    description: "用于部署registry web console的模板.需要cluster-admin权限."
     tags: infrastructure
 labels:
   createdBy: "registry-console-template"
@@ -103,13 +103,13 @@ parameters:
   - description: "Container image name"
     name: IMAGE_NAME
     value: "cockpit/kubernetes"
-  - description: 'Specify image version; e.g. for "cockpit/kubernetes:latest", set version "latest"'
+  - description: '指定镜像版本;比如 对于 "cockpit/kubernetes:latest", 设置版本为 "latest"'
     name: IMAGE_VERSION
     value: latest
-  - description: "The public URL for the Openshift OAuth Provider, e.g. https://openshift.example.com:8443"
+  - description: "Openshift OAuth Provider的公共URL, 比如 https://openshift.example.com:8443"
     name: OPENSHIFT_OAUTH_PROVIDER_URL
     required: true
-  - description: "The registry console URL. This should be created beforehand using 'oc create route passthrough --service registry-console --port registry-console -n default', e.g. https://registry-console-default.example.com"
+  - description: "Registry console URL. 需要事先通过命令 'oc create route passthrough --service registry-console --port registry-console -n default' 创建, 比如: https://registry-console-default.example.com"
     name: COCKPIT_KUBE_URL
     required: true
   - description: "Oauth client secret"
@@ -119,6 +119,6 @@ parameters:
   - description: "Oauth client id"
     name: OPENSHIFT_OAUTH_CLIENT_ID
     value: "cockpit-oauth-client"
-  - description: "The integrated registry hostname exposed via route, e.g. registry.example.com"
+  - description: "通过路由暴露的所集成的registry主机名, 比如 registry.example.com"
     name: REGISTRY_HOST
     required: true

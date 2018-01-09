@@ -5,7 +5,7 @@
     "name": "mysql-persistent",
     "annotations": {
       "openshift.io/display-name": "MySQL (Persistent)",
-      "description": "MySQL database service, with persistent storage. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/mysql-container/blob/master/5.7/README.md.\n\nNOTE: Scaling to more than one replica is not supported. You must have persistent volumes available in your cluster to use this template.",
+      "description": "MySQL 数据库服务, 带持久化存储. 关于该模板的更多信息, 包括OpenShift的一些注意事项, 见 https://github.com/sclorg/mysql-container/blob/master/5.7/README.md.\n\n注意: 不支持扩展多副本. 集群中必须有可用的持久化卷才能使用该模板.",
       "iconClass": "icon-mysql-database",
       "tags": "database,mysql",
       "template.openshift.io/long-description": "This template provides a standalone MySQL server with a database created.  The database is stored on persistent storage.  The database name, username, and password are chosen via parameters when provisioning this service.",
@@ -14,7 +14,7 @@
       "template.openshift.io/support-url": "https://access.redhat.com"
     }
   },
-  "message": "The following service(s) have been created in your project: ${DATABASE_SERVICE_NAME}.\n\n       Username: ${MYSQL_USER}\n       Password: ${MYSQL_PASSWORD}\n  Database Name: ${MYSQL_DATABASE}\n Connection URL: mysql://${DATABASE_SERVICE_NAME}:3306/\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/mysql-container/blob/master/5.7/README.md.",
+  "message": "在您的项目中创建了以下服务: ${DATABASE_SERVICE_NAME}.\n\n       Username: ${MYSQL_USER}\n       Password: ${MYSQL_PASSWORD}\n  Database Name: ${MYSQL_DATABASE}\n Connection URL: mysql://${DATABASE_SERVICE_NAME}:3306/\n\n关于使用该模板的更多信息, 包括一些OpenShift注意事项, 见 https://github.com/sclorg/mysql-container/blob/master/5.7/README.md.",
   "labels": {
     "template": "mysql-persistent-template"
   },
@@ -212,27 +212,27 @@
     {
       "name": "MEMORY_LIMIT",
       "displayName": "Memory Limit",
-      "description": "Maximum amount of memory the container can use.",
+      "description": "容器能使用的最大内存.",
       "value": "512Mi",
       "required": true
     },
     {
       "name": "NAMESPACE",
       "displayName": "Namespace",
-      "description": "The OpenShift Namespace where the ImageStream resides.",
+      "description": "ImageStream所在的OpenShift命名空间.",
       "value": "openshift"
     },
     {
       "name": "DATABASE_SERVICE_NAME",
       "displayName": "Database Service Name",
-      "description": "The name of the OpenShift Service exposed for the database.",
+      "description": "为数据库暴露的OpenShift服务的名称.",
       "value": "mysql",
       "required": true
     },
     {
       "name": "MYSQL_USER",
       "displayName": "MySQL Connection Username",
-      "description": "Username for MySQL user that will be used for accessing the database.",
+      "description": "用于访问数据库的MySQL用户的用户名.",
       "generate": "expression",
       "from": "user[A-Z0-9]{3}",
       "required": true
@@ -240,7 +240,7 @@
     {
       "name": "MYSQL_PASSWORD",
       "displayName": "MySQL Connection Password",
-      "description": "Password for the MySQL connection user.",
+      "description": "MySQL连接用户的密码.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
       "required": true
@@ -248,7 +248,7 @@
     {
       "name": "MYSQL_ROOT_PASSWORD",
       "displayName": "MySQL root user Password",
-      "description": "Password for the MySQL root user.",
+      "description": "MySQL root用户的密码.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
       "required": true
@@ -256,21 +256,21 @@
     {
       "name": "MYSQL_DATABASE",
       "displayName": "MySQL Database Name",
-      "description": "Name of the MySQL database accessed.",
+      "description": "访问的MySQL数据库的名称.",
       "value": "sampledb",
       "required": true
     },
     {
       "name": "VOLUME_CAPACITY",
       "displayName": "Volume Capacity",
-      "description": "Volume space available for data, e.g. 512Mi, 2Gi.",
+      "description": "可用的数据卷容量, 比如 512Mi, 2Gi.",
       "value": "1Gi",
       "required": true
     },
     {
       "name": "MYSQL_VERSION",
       "displayName": "Version of MySQL Image",
-      "description": "Version of MySQL image to be used (5.5, 5.6, 5.7, or latest).",
+      "description": "MySQL镜像版版(5.5, 5.6, 5.7, or latest).",
       "value": "5.7",
       "required": true
     }

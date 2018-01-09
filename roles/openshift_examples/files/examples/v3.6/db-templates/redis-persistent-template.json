@@ -5,7 +5,7 @@
     "name": "redis-persistent",
     "annotations": {
       "openshift.io/display-name": "Redis (Persistent)",
-      "description": "Redis in-memory data structure store, with persistent storage. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/redis-container/blob/master/3.2.\n\nNOTE: You must have persistent volumes available in your cluster to use this template.",
+      "description": "Redis 内存数据库, 带持久化存储. 关于该模板的更多信息, 包括OpenShift的一些注意事项, 见 https://github.com/sclorg/redis-container/blob/master/3.2.\n\n注意: 集群中必须有可用的持久化卷才能使用该模板.",
       "iconClass": "icon-redis",
       "tags": "database,redis",
       "template.openshift.io/long-description": "This template provides a standalone Redis server.  The data is stored on persistent storage.",
@@ -197,27 +197,27 @@
     {
       "name": "MEMORY_LIMIT",
       "displayName": "Memory Limit",
-      "description": "Maximum amount of memory the container can use.",
+      "description": "容器能使用的最大内存.",
       "value": "512Mi",
       "required": true
     },
     {
       "name": "NAMESPACE",
       "displayName": "Namespace",
-      "description": "The OpenShift Namespace where the ImageStream resides.",
+      "description": "ImageStream所在的OpenShift命名空间.",
       "value": "openshift"
     },
     {
       "name": "DATABASE_SERVICE_NAME",
       "displayName": "Database Service Name",
-      "description": "The name of the OpenShift Service exposed for the database.",
+      "description": "为数据库暴露的OpenShift服务的名称.",
       "value": "redis",
       "required": true
     },
     {
       "name": "REDIS_PASSWORD",
       "displayName": "Redis Connection Password",
-      "description": "Password for the Redis connection user.",
+      "description": "Redis连接用户的密码.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
       "required": true
@@ -225,14 +225,14 @@
     {
       "name": "VOLUME_CAPACITY",
       "displayName": "Volume Capacity",
-      "description": "Volume space available for data, e.g. 512Mi, 2Gi.",
+      "description": "可用数据卷的大小, 比如 512Mi, 2Gi.",
       "value": "1Gi",
       "required": true
     },
     {
       "name": "REDIS_VERSION",
       "displayName": "Version of Redis Image",
-      "description": "Version of Redis image to be used (3.2 or latest).",
+      "description": "Redis镜像的版本(3.2 or latest).",
       "value": "3.2",
       "required": true
     }

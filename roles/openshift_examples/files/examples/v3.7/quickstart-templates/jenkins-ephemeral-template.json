@@ -5,16 +5,16 @@
     "name": "jenkins-ephemeral",
     "annotations": {
       "openshift.io/display-name": "Jenkins (Ephemeral)",
-      "description": "Jenkins service, without persistent storage.\n\nWARNING: Any data stored will be lost upon pod destruction. Only use this template for testing.",
+      "description": "Jenkins服务, 不带持久化存储.\n\n警告: 该模板仅用于测试. 任何数据都会随着pod的销毁而丢失.",
       "iconClass": "icon-jenkins",
       "tags": "instant-app,jenkins",
-      "template.openshift.io/long-description": "This template deploys a Jenkins server capable of managing OpenShift Pipeline builds and supporting OpenShift-based oauth login.  The Jenkins configuration is stored in non-persistent storage, so this configuration should be used for experimental purposes only.",
+      "template.openshift.io/long-description": "该模板部署了一个Jenkins服务器，可以管理OpenShift管道构建和支持基于OpenShift的oauth登录. Jenkins配置存储在非持久性存储中，因此该配置仅用于实验目的.",
       "template.openshift.io/provider-display-name": "Red Hat, Inc.",
       "template.openshift.io/documentation-url": "https://docs.openshift.org/latest/using_images/other_images/jenkins.html",
       "template.openshift.io/support-url": "https://access.redhat.com"
     }
   },
-  "message": "A Jenkins service has been created in your project.  Log into Jenkins with your OpenShift account.  The tutorial at https://github.com/openshift/origin/blob/master/examples/jenkins/README.md contains more information about using this template.",
+  "message": "Jenkins服务已经在你的项目中创建. 可以用OpenShift账号来登录Jenkins.  教程 https://github.com/openshift/origin/blob/master/examples/jenkins/README.md 包含更多使用此模板的信息.",
   "objects": [
     {
       "kind": "Route",
@@ -244,43 +244,43 @@
     {
       "name": "JENKINS_SERVICE_NAME",
       "displayName": "Jenkins Service Name",
-      "description": "The name of the OpenShift Service exposed for the Jenkins container.",
+      "description": "为Jenkins容器暴露的OpenShift服务的名称",
       "value": "jenkins"
     },
     {
       "name": "JNLP_SERVICE_NAME",
       "displayName": "Jenkins JNLP Service Name",
-      "description": "The name of the service used for master/slave communication.",
+      "description": "用于master/slave通信的服务的名称",
       "value": "jenkins-jnlp"
     },
     {
       "name": "ENABLE_OAUTH",
-      "displayName": "Enable OAuth in Jenkins",
-      "description": "Whether to enable OAuth OpenShift integration. If false, the static account 'admin' will be initialized with the password 'password'.",
+      "displayName": "在Jenkins中启用OAuth",
+      "description": "是否启用OpenShift OAuth 集成. 如果不启用, 那么默认的账号密码是 admin:password.",
       "value": "true"
     },
     {
       "name": "JVM_ARCH",
-      "displayName": "Jenkins JVM Architecture",
-      "description": "Whether Jenkins runs with a 32 bit (i386) or 64 bit (x86_64) JVM.",
+      "displayName": "Jenkins JVM架构",
+      "description": "Jenkins是运行在32位JVM还是64位JVM之上.",
       "value": "i386"
     },
     {
       "name": "MEMORY_LIMIT",
-      "displayName": "Memory Limit",
-      "description": "Maximum amount of memory the container can use.",
+      "displayName": "内存限制",
+      "description": "容器可以使用的最大内存",
       "value": "512Mi"
     },
     {
       "name": "NAMESPACE",
       "displayName": "Jenkins ImageStream Namespace",
-      "description": "The OpenShift Namespace where the Jenkins ImageStream resides.",
+      "description": "Jenkins ImageStream所在的OpenShift名称空间",
       "value": "openshift"
     },
     {
       "name": "JENKINS_IMAGE_STREAM_TAG",
       "displayName": "Jenkins ImageStreamTag",
-      "description": "Name of the ImageStreamTag to be used for the Jenkins image.",
+      "description": "用于Jenkins镜像的ImageStreamTag的名称.",
       "value": "jenkins:latest"
     }
   ],
