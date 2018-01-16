@@ -229,27 +229,27 @@
   "parameters": [
     {
       "name": "MEMORY_LIMIT",
-      "displayName": "Memory Limit",
+      "displayName": "内存限制",
       "description": "容器能使用的最大内存.",
       "value": "512Mi",
       "required": true
     },
     {
       "name": "NAMESPACE",
-      "displayName": "Namespace",
+      "displayName": "命名空间",
       "description": "ImageStream所在的OpenShift命名空间.",
       "value": "openshift"
     },
     {
       "name": "DATABASE_SERVICE_NAME",
-      "displayName": "Database Service Name",
+      "displayName": "数据库服务名称",
       "description": "为数据库暴露的OpenShift服务的名称.",
       "value": "mongodb",
       "required": true
     },
     {
       "name": "MONGODB_USER",
-      "displayName": "MongoDB Connection Username",
+      "displayName": "MongoDB连接用户名",
       "description": "用于访问数据库的MongoDB用户的用户名.",
       "generate": "expression",
       "from": "user[A-Z0-9]{3}",
@@ -257,7 +257,7 @@
     },
     {
       "name": "MONGODB_PASSWORD",
-      "displayName": "MongoDB Connection Password",
+      "displayName": "MongoDB连接密码",
       "description": "MongoDB连接用户的密码.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
@@ -265,14 +265,14 @@
     },
     {
       "name": "MONGODB_DATABASE",
-      "displayName": "MongoDB Database Name",
+      "displayName": "MongoDB数据库名称",
       "description": "访问的MongoDB数据库的名称.",
       "value": "sampledb",
       "required": true
     },
     {
       "name": "MONGODB_ADMIN_PASSWORD",
-      "displayName": "MongoDB Admin Password",
+      "displayName": "MongoDB 管理员密码",
       "description": "MongoDB管理员密码.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
@@ -280,15 +280,15 @@
     },
     {
       "name": "VOLUME_CAPACITY",
-      "displayName": "Volume Capacity",
+      "displayName": "卷容量",
       "description": "可用的数据卷容量, 比如 512Mi, 2Gi.",
       "value": "1Gi",
       "required": true
     },
     {
       "name": "MONGODB_VERSION",
-      "displayName": "Version of MongoDB Image",
-      "description": "MongoDB镜像版版(2.4, 2.6, 3.2 or latest).",
+      "displayName": "MongoDB镜像版本",
+      "description": "MongoDB镜像版本(2.4, 2.6, 3.2 or latest).",
       "value": "3.2",
       "required": true
     }

@@ -218,27 +218,27 @@
   "parameters": [
     {
       "name": "MEMORY_LIMIT",
-      "displayName": "Memory Limit",
+      "displayName": "内存限制",
       "description": "容器能使用的最大内存.",
       "value": "512Mi",
       "required": true
     },
     {
       "name": "NAMESPACE",
-      "displayName": "Namespace",
+      "displayName": "命名空间",
       "description": "ImageStream所在的OpenShift命名空间.",
       "value": "openshift"
     },
     {
       "name": "DATABASE_SERVICE_NAME",
-      "displayName": "Database Service Name",
+      "displayName": "数据库服务名称",
       "description": "为数据库暴露的OpenShift服务的名称.",
       "value": "postgresql",
       "required": true
     },
     {
       "name": "POSTGRESQL_USER",
-      "displayName": "PostgreSQL Connection Username",
+      "displayName": "PostgreSQL连接用户名",
       "description": "用于访问数据库的PostgreSQL用户名.",
       "generate": "expression",
       "from": "user[A-Z0-9]{3}",
@@ -246,7 +246,7 @@
     },
     {
       "name": "POSTGRESQL_PASSWORD",
-      "displayName": "PostgreSQL Connection Password",
+      "displayName": "PostgreSQL连接密码",
       "description": "PostgreSQL连接用户的密码.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
@@ -254,21 +254,21 @@
     },
     {
       "name": "POSTGRESQL_DATABASE",
-      "displayName": "PostgreSQL Database Name",
+      "displayName": "PostgreSQL数据库名称",
       "description": "访问的PostgreSQL数据库的名称.",
       "value": "sampledb",
       "required": true
     },
     {
       "name": "VOLUME_CAPACITY",
-      "displayName": "Volume Capacity",
+      "displayName": "卷容量",
       "description": "可用数据卷的大小, 比如 512Mi, 2Gi.",
       "value": "1Gi",
       "required": true
     },
     {
       "name": "POSTGRESQL_VERSION",
-      "displayName": "Version of PostgreSQL Image",
+      "displayName": "PostgreSQL 镜像版本",
       "description": "PostgreSQL镜像的版本(9.2, 9.4, 9.5 or latest).",
       "value": "9.5",
       "required": true

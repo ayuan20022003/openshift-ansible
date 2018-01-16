@@ -213,27 +213,27 @@
   "parameters": [
     {
       "name": "MEMORY_LIMIT",
-      "displayName": "Memory Limit",
+      "displayName": "内存限制",
       "description": "容器可使用的最大内存.",
       "value": "512Mi",
       "required": true
     },
     {
       "name": "NAMESPACE",
-      "displayName": "Namespace",
+      "displayName": "命名空间",
       "description": "ImageStream所在的OpenShift命名空间.",
       "value": "openshift"
     },
     {
       "name": "DATABASE_SERVICE_NAME",
-      "displayName": "Database Service Name",
+      "displayName": "数据库服务名称",
       "description": "为数据库暴露的OpenShift服务的名称.",
       "value": "mysql",
       "required": true
     },
     {
       "name": "MYSQL_USER",
-      "displayName": "MySQL Connection Username",
+      "displayName": "MySQL连接用户名",
       "description": "用于访问数据库的MySQL用户名.",
       "generate": "expression",
       "from": "user[A-Z0-9]{3}",
@@ -241,7 +241,7 @@
     },
     {
       "name": "MYSQL_PASSWORD",
-      "displayName": "MySQL Connection Password",
+      "displayName": "MySQL连接密码",
       "description": "MySQL连接用户的密码.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
@@ -249,7 +249,7 @@
     },
     {
       "name": "MYSQL_ROOT_PASSWORD",
-      "displayName": "MySQL root user Password",
+      "displayName": "MySQL root用户密码",
       "description": "MySQL root用户的密码.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
@@ -257,14 +257,14 @@
     },
     {
       "name": "MYSQL_DATABASE",
-      "displayName": "MySQL Database Name",
+      "displayName": "MySQL 数据库名称",
       "description": "访问的MySQL数据库的名称.",
       "value": "sampledb",
       "required": true
     },
     {
       "name": "MYSQL_VERSION",
-      "displayName": "Version of MySQL Image",
+      "displayName": "MySQL镜像版本",
       "description": "MySQL镜像的版本(5.5, 5.6, 5.7, or latest).",
       "value": "5.7",
       "required": true

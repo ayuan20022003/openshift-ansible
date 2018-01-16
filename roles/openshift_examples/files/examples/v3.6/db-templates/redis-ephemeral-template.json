@@ -179,27 +179,27 @@
   "parameters": [
     {
       "name": "MEMORY_LIMIT",
-      "displayName": "Memory Limit",
+      "displayName": "内存限制",
       "description": "容器可使用的最大内存.",
       "value": "512Mi",
       "required": true
     },
     {
       "name": "NAMESPACE",
-      "displayName": "Namespace",
+      "displayName": "命名空间",
       "description": "ImageStream所在的OpenShift命名空间.",
       "value": "openshift"
     },
     {
       "name": "DATABASE_SERVICE_NAME",
-      "displayName": "Database Service Name",
+      "displayName": "数据库服务名称",
       "description": "为数据库暴露的OpenShift服务的名称.",
       "value": "redis",
       "required": true
     },
     {
       "name": "REDIS_PASSWORD",
-      "displayName": "Redis Connection Password",
+      "displayName": "Redis连接密码",
       "description": "Redis 连接用户的密码.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
@@ -207,7 +207,7 @@
     },
     {
       "name": "REDIS_VERSION",
-      "displayName": "Version of Redis Image",
+      "displayName": "Redis 镜像版本",
       "description": "Redis镜像版本(3.2 or latest).",
       "value": "3.2",
       "required": true

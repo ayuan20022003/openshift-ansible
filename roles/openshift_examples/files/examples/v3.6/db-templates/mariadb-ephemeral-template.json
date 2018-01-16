@@ -194,27 +194,27 @@
   "parameters": [
     {
       "name": "MEMORY_LIMIT",
-      "displayName": "Memory Limit",
+      "displayName": "内存限制",
       "description": "容器能使用的最大内存",
       "value": "512Mi",
       "required": true
     },
     {
       "name": "NAMESPACE",
-      "displayName": "Namespace",
+      "displayName": "命名空间",
       "description": "ImageStream所在的Openshift命名空间.",
       "value": "openshift"
     },
     {
       "name": "DATABASE_SERVICE_NAME",
-      "displayName": "Database Service Name",
+      "displayName": "数据库服务名称",
       "description": "为数据库暴露的OpenShift服务的名称",
       "value": "mariadb",
       "required": true
     },
     {
       "name": "MYSQL_USER",
-      "displayName": "MariaDB Connection Username",
+      "displayName": "MariaDB连接用户名",
       "description": "用于访问数据库的MariaDB用户的用户名",
       "generate": "expression",
       "from": "user[A-Z0-9]{3}",
@@ -222,7 +222,7 @@
     },
     {
       "name": "MYSQL_PASSWORD",
-      "displayName": "MariaDB Connection Password",
+      "displayName": "MariaDB连接密码",
       "description": "MariaDB连接用户的密码",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
@@ -230,7 +230,7 @@
     },
     {
       "name": "MYSQL_ROOT_PASSWORD",
-      "displayName": "MariaDB root Password",
+      "displayName": "MariaDB root 密码",
       "description": "MariaDB root用户的密码",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{16}",
@@ -238,7 +238,7 @@
     },
     {
       "name": "MYSQL_DATABASE",
-      "displayName": "MariaDB Database Name",
+      "displayName": "MariaDB 数据库名称",
       "description": "访问的MariaDB数据库的名称.",
       "value": "sampledb",
       "required": true

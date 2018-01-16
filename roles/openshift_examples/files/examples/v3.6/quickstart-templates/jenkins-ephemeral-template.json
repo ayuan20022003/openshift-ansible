@@ -243,13 +243,13 @@
   "parameters": [
     {
       "name": "JENKINS_SERVICE_NAME",
-      "displayName": "Jenkins Service Name",
+      "displayName": "Jenkins服务名称",
       "description": "为Jenkins容器暴露的OpenShift服务的名称",
       "value": "jenkins"
     },
     {
       "name": "JNLP_SERVICE_NAME",
-      "displayName": "Jenkins JNLP Service Name",
+      "displayName": "Jenkins JNLP 服务名称",
       "description": "用于master/slave通信的服务的名称",
       "value": "jenkins-jnlp"
     },
@@ -273,13 +273,13 @@
     },
     {
       "name": "NAMESPACE",
-      "displayName": "Jenkins ImageStream Namespace",
+      "displayName": "Jenkins镜像流命名空间",
       "description": "Jenkins ImageStream所在的OpenShift名称空间",
       "value": "openshift"
     },
     {
       "name": "JENKINS_IMAGE_STREAM_TAG",
-      "displayName": "Jenkins ImageStreamTag",
+      "displayName": "Jenkins镜像流标签",
       "description": "用于Jenkins镜像的ImageStreamTag的名称.",
       "value": "jenkins:latest"
     }
