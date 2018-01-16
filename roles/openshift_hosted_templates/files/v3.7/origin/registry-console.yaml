@@ -100,10 +100,10 @@ objects:
     redirectURIs:
       - "${COCKPIT_KUBE_URL}"
 parameters:
-  - description: "Container image name"
+  - description: "镜像名称"
     name: IMAGE_NAME
     value: "cockpit/kubernetes"
-  - description: '指定镜像版本;比如 对于 "cockpit/kubernetes:latest", 设置版本为 "latest"'
+  - description: '镜像版本;比如 对于 "cockpit/kubernetes:latest", 设置版本为 "latest"'
     name: IMAGE_VERSION
     value: latest
   - description: "Openshift OAuth Provider的公共URL, 比如 https://openshift.example.com:8443"
@@ -112,11 +112,11 @@ parameters:
   - description: "Registry console URL. 需要事先通过命令 'oc create route passthrough --service registry-console --port registry-console -n default' 创建, 比如: https://registry-console-default.example.com"
     name: COCKPIT_KUBE_URL
     required: true
-  - description: "Oauth client secret"
+  - description: "Oauth客户端秘钥"
     name: OPENSHIFT_OAUTH_CLIENT_SECRET
     from: "user[a-zA-Z0-9]{64}"
     generate: expression
-  - description: "Oauth client id"
+  - description: "Oauth客户端ID"
     name: OPENSHIFT_OAUTH_CLIENT_ID
     value: "cockpit-oauth-client"
   - description: "通过路由暴露的所集成的registry主机名, 比如 registry.example.com"
