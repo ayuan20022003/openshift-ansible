@@ -19,23 +19,23 @@ openshift_logging_curator_run_timezone: UTC
 openshift_logging_curator_script_log_level: INFO
 openshift_logging_curator_log_level: ERROR
 openshift_logging_curator_cpu_limit: null
-openshift_logging_curator_memory_limit: 256Mi
-openshift_logging_curator_cpu_request: 100m
+openshift_logging_curator_memory_limit: null
+openshift_logging_curator_cpu_request: null
 openshift_logging_curator_nodeselector: {}
 
 openshift_logging_curator_ops_cpu_limit: null
-openshift_logging_curator_ops_memory_limit: 256Mi
-openshift_logging_curator_ops_cpu_request: 100m
+openshift_logging_curator_ops_memory_limit: null
+openshift_logging_curator_ops_cpu_request: null
 openshift_logging_curator_ops_nodeselector: {}
 
 openshift_logging_kibana_hostname: "{{ 'kibana.' ~ (openshift_master_default_subdomain | default('router.default.svc.cluster.local', true)) }}"
 openshift_logging_kibana_cpu_limit: null
-openshift_logging_kibana_memory_limit: 736Mi
-openshift_logging_kibana_cpu_request: 100m
+openshift_logging_kibana_memory_limit: null
+openshift_logging_kibana_cpu_request: null
 openshift_logging_kibana_proxy_debug: false
 openshift_logging_kibana_proxy_cpu_limit: null
-openshift_logging_kibana_proxy_memory_limit: 256Mi
-openshift_logging_kibana_proxy_cpu_request: 100m
+openshift_logging_kibana_proxy_memory_limit: null
+openshift_logging_kibana_proxy_cpu_request: null
 openshift_logging_kibana_replica_count: 1
 openshift_logging_kibana_edge_term_policy: Redirect
 
@@ -56,11 +56,11 @@ openshift_logging_kibana_ca: ""
 
 openshift_logging_kibana_ops_hostname: "{{ 'kibana-ops.' ~ (openshift_master_default_subdomain | default('router.default.svc.cluster.local', true)) }}"
 openshift_logging_kibana_ops_cpu_limit: null
-openshift_logging_kibana_ops_memory_limit: 736Mi
-openshift_logging_kibana_ops_cpu_request: 100m
+openshift_logging_kibana_ops_memory_limit: null
+openshift_logging_kibana_ops_cpu_request: null
 openshift_logging_kibana_ops_proxy_debug: false
 openshift_logging_kibana_ops_proxy_cpu_limit: null
-openshift_logging_kibana_ops_proxy_memory_limit: 256Mi
+openshift_logging_kibana_ops_proxy_memory_limit: null
 openshift_logging_kibana_ops_proxy_cpu_request: 100m
 openshift_logging_kibana_ops_replica_count: 1
 
@@ -78,7 +78,7 @@ openshift_logging_kibana_ops_ca: ""
 
 openshift_logging_fluentd_nodeselector: {'logging-infra-fluentd': 'true'}
 openshift_logging_fluentd_cpu_limit: null
-openshift_logging_fluentd_memory_limit: 512Mi
+openshift_logging_fluentd_memory_limit: null
 openshift_logging_fluentd_cpu_request: 100m
 openshift_logging_fluentd_journal_source: ""
 openshift_logging_fluentd_journal_read_from_head: ""

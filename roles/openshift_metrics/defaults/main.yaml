@@ -4,9 +4,9 @@ openshift_metrics_install_metrics: False
 openshift_metrics_startup_timeout: 500
 
 openshift_metrics_hawkular_replicas: 1
-openshift_metrics_hawkular_limits_memory: 2.5G
+openshift_metrics_hawkular_limits_memory: null
 openshift_metrics_hawkular_limits_cpu: null
-openshift_metrics_hawkular_requests_memory: 1.5G
+openshift_metrics_hawkular_requests_memory: null
 openshift_metrics_hawkular_requests_cpu: null
 openshift_metrics_hawkular_cert: ""
 openshift_metrics_hawkular_key: ""
@@ -18,17 +18,17 @@ openshift_metrics_cassandra_replicas: 1
 openshift_metrics_cassandra_storage_type: "{{ openshift_metrics_storage_kind | default('emptydir') }}"
 openshift_metrics_cassandra_pvc_size: "{{ openshift_metrics_storage_volume_size | default('10Gi') }}"
 openshift_metrics_cassandra_pv_selector: "{{ openshift_metrics_storage_labels | default('') }}"
-openshift_metrics_cassandra_limits_memory: 2G
+openshift_metrics_cassandra_limits_memory: null
 openshift_metrics_cassandra_limits_cpu: null
-openshift_metrics_cassandra_requests_memory: 1G
+openshift_metrics_cassandra_requests_memory: null
 openshift_metrics_cassandra_requests_cpu: null
 openshift_metrics_cassandra_nodeselector: ""
 openshift_metrics_cassandra_storage_group: 65534
 
 openshift_metrics_heapster_standalone: False
-openshift_metrics_heapster_limits_memory: 3.75G
+openshift_metrics_heapster_limits_memory: null
 openshift_metrics_heapster_limits_cpu: null
-openshift_metrics_heapster_requests_memory: 0.9375G
+openshift_metrics_heapster_requests_memory: null
 openshift_metrics_heapster_requests_cpu: null
 openshift_metrics_heapster_nodeselector: ""
 

@@ -127,10 +127,6 @@ class RegistryTest(unittest.TestCase):
                                         }
                                     ],
                                     "resources": {
-                                        "requests": {
-                                            "cpu": "100m",
-                                            "memory": "256Mi"
-                                        }
                                     },
                                     "volumeMounts": [
                                         {
