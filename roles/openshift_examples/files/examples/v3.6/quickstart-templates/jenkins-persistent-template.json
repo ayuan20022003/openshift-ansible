@@ -143,6 +143,10 @@
                   {
                     "name": "JNLP_SERVICE_NAME",
                     "value": "${JNLP_SERVICE_NAME}"
+                  },
+                  {
+                    "name": "JAVA_OPTS",
+                    "value": "-Duser.timezone=Asia/Shanghai"
                   }
                 ],
                 "resources": {
