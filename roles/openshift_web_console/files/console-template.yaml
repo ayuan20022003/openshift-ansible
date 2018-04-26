@@ -26,8 +26,8 @@ parameters:
 objects:
 
 # to create the web console server
-- apiVersion: apps/v1beta1
-  kind: Deployment
+- apiVersion: extensions/v1beta1
+  kind: DaemonSet
   metadata:
     namespace: ${NAMESPACE}
     name: webconsole
@@ -35,7 +35,6 @@ objects:
       app: openshift-web-console
       webconsole: "true"
   spec:
-    replicas: "${{REPLICA_COUNT}}"
     strategy:
       type: Recreate
     template:
