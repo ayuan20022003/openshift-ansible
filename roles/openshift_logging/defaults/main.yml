@@ -98,7 +98,7 @@ openshift_logging_es_cpu_limit: null
 openshift_logging_es_cpu_request: "1"
 # the logging appenders for the root loggers to write ES logs. Valid values: 'file', 'console'
 openshift_logging_es_log_appenders: ['file']
-openshift_logging_es_memory_limit: "2Gi"
+openshift_logging_es_memory_limit: "8Gi"
 openshift_logging_es_pv_selector: "{{ openshift_logging_storage_labels | default('') }}"
 openshift_logging_es_pvc_dynamic: "{{ openshift_logging_elasticsearch_pvc_dynamic | default(False) }}"
 openshift_logging_es_pvc_size: ''
