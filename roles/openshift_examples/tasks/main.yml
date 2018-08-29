@@ -102,6 +102,7 @@
     - "{{ quickstarts_base }}/dotnet-runtime-example.json"
     - "{{ quickstarts_base }}/dotnet.json"
     - "{{ quickstarts_base }}/httpd.json"
+    - "{{ quickstarts_base }}/nginx.json"
     - "{{ quickstarts_base }}/nodejs-mongodb-persistent.json"
     - "{{ quickstarts_base }}/nodejs-mongodb.json"
     - "{{ quickstarts_base }}/pvc.yml"
