@@ -64,9 +64,9 @@ EOF
     # we can do is grab them from /etc/resolv.conf but only if we've got no
     # watermark
     if ! grep -q '99-origin-dns.sh' /etc/resolv.conf; then
-      if [[ -z "${IP4_NAMESERVERS}" || "${IP4_NAMESERVERS}" == "${def_route_ip}" ]]; then
+#      if [[ -z "${IP4_NAMESERVERS}" || "${IP4_NAMESERVERS}" == "${def_route_ip}" ]]; then
             IP4_NAMESERVERS=`grep '^nameserver[[:blank:]]' /etc/resolv.conf | awk '{ print $2 }'`
-      fi
+#      fi
       ######################################################################
       # Write out default nameservers for /etc/dnsmasq.d/origin-upstream-dns.conf
       # and /etc/origin/node/resolv.conf in their respective formats
