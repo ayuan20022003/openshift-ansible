@@ -5,14 +5,14 @@
         "app": "jenkins-persistent",
         "template": "jenkins-persistent-template"
     },
-    "message": "A Jenkins service has been created in your project.  Log into Jenkins with your OpenShift account.  The tutorial at https://github.com/openshift/origin/blob/master/examples/jenkins/README.md contains more information about using this template.",
+    "message": "已在项目中创建Jenkins服务。使用您的OpenShift帐户登录Jenkins。 https://github.com/openshift/origin/blob/master/examples/jenkins/README.md上的教程包含有关使用此模板的更多信息。",
     "metadata": {
         "annotations": {
-            "description": "Jenkins service, with persistent storage.\n\nNOTE: You must have persistent volumes available in your cluster to use this template.",
+            "description": "Jenkins服务，具有持久存储。\n \n注意：群集中必须有持久卷才能使用此模板。",
             "iconClass": "icon-jenkins",
             "openshift.io/display-name": "Jenkins",
             "openshift.io/documentation-url": "https://docs.openshift.org/latest/using_images/other_images/jenkins.html",
-            "openshift.io/long-description": "This template deploys a Jenkins server capable of managing OpenShift Pipeline builds and supporting OpenShift-based oauth login.",
+            "openshift.io/long-description": "此模板部署了一个Jenkins服务器，该服务器能够管理OpenShift Pipeline构建并支持基于OpenShift的oauth登录。",
             "openshift.io/provider-display-name": "Red Hat, Inc.",
             "openshift.io/support-url": "https://access.redhat.com",
             "tags": "instant-app,jenkins"
@@ -273,50 +273,50 @@
     ],
     "parameters": [
         {
-            "description": "The name of the OpenShift Service exposed for the Jenkins container.",
+            "description": "为Jenkins容器公开的OpenShift服务的名称。",
             "displayName": "Jenkins Service Name",
             "name": "JENKINS_SERVICE_NAME",
             "value": "jenkins"
         },
         {
-            "description": "The name of the service used for master/slave communication.",
+            "description": "用于主/从通信的服务的名称。",
             "displayName": "Jenkins JNLP Service Name",
             "name": "JNLP_SERVICE_NAME",
             "value": "jenkins-jnlp"
         },
         {
-            "description": "Whether to enable OAuth OpenShift integration. If false, the static account 'admin' will be initialized with the password 'password'.",
+            "description": "是否启用OAuth OpenShift集成。如果为false，则将使用密码“password”初始化静态帐户“admin”。",
             "displayName": "Enable OAuth in Jenkins",
             "name": "ENABLE_OAUTH",
             "value": "true"
         },
         {
-            "description": "Maximum amount of memory the container can use.",
+            "description": "容器可以使用的最大内存量。",
             "displayName": "Memory Limit",
             "name": "MEMORY_LIMIT",
             "value": "512Mi"
         },
         {
-            "description": "Volume space available for data, e.g. 512Mi, 2Gi.",
+            "description": "可用于数据的卷空间，例如512Mi，2Gi。",
             "displayName": "Volume Capacity",
             "name": "VOLUME_CAPACITY",
             "required": true,
             "value": "1Gi"
         },
         {
-            "description": "The OpenShift Namespace where the Jenkins ImageStream resides.",
+            "description": "Jenkins ImageStream所在的OpenShift命名空间",
             "displayName": "Jenkins ImageStream Namespace",
             "name": "NAMESPACE",
             "value": "openshift"
         },
         {
-            "description": "Whether to perform memory intensive, possibly slow, synchronization with the Jenkins Update Center on start.  If true, the Jenkins core update monitor and site warnings monitor are disabled.",
+            "description": "是否在启动时同步执行与Jenkins更新中心的内存密集，可能很慢。如果为true，则禁用Jenkins核心更新监视器和站点警告监视器。",
             "displayName": "Disable memory intensive administrative monitors",
             "name": "DISABLE_ADMINISTRATIVE_MONITORS",
             "value": "false"
         },
         {
-            "description": "Name of the ImageStreamTag to be used for the Jenkins image.",
+            "description": "要用于Jenkins镜像的ImageStreamTag的名称。",
             "displayName": "Jenkins ImageStreamTag",
             "name": "JENKINS_IMAGE_STREAM_TAG",
             "value": "jenkins:2"
