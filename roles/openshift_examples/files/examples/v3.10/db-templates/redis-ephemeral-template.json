@@ -7,11 +7,11 @@
     "message": "The following service(s) have been created in your project: ${DATABASE_SERVICE_NAME}.\n\n       Password: ${REDIS_PASSWORD}\n Connection URL: redis://${DATABASE_SERVICE_NAME}:6379/\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/redis-container/blob/master/3.2.",
     "metadata": {
         "annotations": {
-            "description": "Redis内存中的数据结构存储，没有持久存储。有关使用此模板的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/redis-container/blob/master/3.2.\nnn警告：存储的任何数据都将在pod销毁时丢失。仅使用此模板进行测试",
+            "description": "Redis in-memory data structure store, without persistent storage. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/redis-container/blob/master/3.2.\n\nWARNING: Any data stored will be lost upon pod destruction. Only use this template for testing",
             "iconClass": "icon-redis",
             "openshift.io/display-name": "Redis (Ephemeral)",
             "openshift.io/documentation-url": "https://github.com/sclorg/redis-container/tree/master/3.2",
-            "openshift.io/long-description": "此模板提供独立的Redis服务器。数据不存储在持久存储中，因此重新启动服务将导致所有数据丢失。",
+            "openshift.io/long-description": "This template provides a standalone Redis server.  The data is not stored on persistent storage, so any restart of the service will result in all data being lost.",
             "openshift.io/provider-display-name": "Red Hat, Inc.",
             "openshift.io/support-url": "https://access.redhat.com",
             "tags": "database,redis"
@@ -183,27 +183,27 @@
     ],
     "parameters": [
         {
-            "description": "容器可以使用的最大内存量。",
+            "description": "Maximum amount of memory the container can use.",
             "displayName": "Memory Limit",
             "name": "MEMORY_LIMIT",
             "required": true,
             "value": "512Mi"
         },
         {
-            "description": "ImageStream所在的OpenShift命名空间。",
+            "description": "The OpenShift Namespace where the ImageStream resides.",
             "displayName": "Namespace",
             "name": "NAMESPACE",
             "value": "openshift"
         },
         {
-            "description": "为数据库公开的OpenShift服务的名称.",
+            "description": "The name of the OpenShift Service exposed for the database.",
             "displayName": "Database Service Name",
             "name": "DATABASE_SERVICE_NAME",
             "required": true,
             "value": "redis"
         },
         {
-            "description": "Redis连接用户的密码。",
+            "description": "Password for the Redis connection user.",
             "displayName": "Redis Connection Password",
             "from": "[a-zA-Z0-9]{16}",
             "generate": "expression",
@@ -211,7 +211,7 @@
             "required": true
         },
         {
-            "description": "要使用的Redis图像版本（3.2或最新）。",
+            "description": "Version of Redis image to be used (3.2 or latest).",
             "displayName": "Version of Redis Image",
             "name": "REDIS_VERSION",
             "required": true,
