@@ -15,7 +15,7 @@
         "tags": [
           {
             "annotations": {
-              "description": "在CentOS 7上提供Jenkins服务器。有关使用此容器映像的更多信息，包括OpenShift注意事项，请参阅https://github.com/openshift/jenkins/blob/master/README.md.\n\n警告：选择此项标签，您的应用程序将自动更新以使用OpenShift上可用的最新版Jenkins，包括主要版本更新。",
+              "description": "在CentOS 7上提供Jenkins服务器。有关使用此容器镜像的更多信息，包括OpenShift注意事项，请参阅https://github.com/openshift/jenkins/blob/master/README.md.\n\n警告：选择此项标签，您的应用程序将自动更新以使用OpenShift上可用的最新版Jenkins，包括主要版本更新。",
               "iconClass": "icon-jenkins",
               "openshift.io/display-name": "Jenkins (Latest)",
               "openshift.io/provider-display-name": "Red Hat, Inc.",
@@ -32,7 +32,7 @@
           },
           {
             "annotations": {
-              "description": "在CentOS 7上提供Jenkins v2.x服务器。有关使用此容器映像（包括OpenShift注意事项）的详细信息，请参阅https://github.com/openshift/jenkins/blob/master/README.md。",
+              "description": "在CentOS 7上提供Jenkins v2.x服务器。有关使用此容器镜像（包括OpenShift注意事项）的详细信息，请参阅https://github.com/openshift/jenkins/blob/master/README.md。",
               "iconClass": "icon-jenkins",
               "openshift.io/display-name": "Jenkins 2.X",
               "openshift.io/provider-display-name": "Red Hat, Inc.",
@@ -64,7 +64,7 @@
         "tags": [
           {
             "annotations": {
-              "description": "在CentOS 7上提供MariaDB数据库。有关使用此数据库映像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/mariadb-container/tree/master/10.2/README.md.\n\nWARNING ：通过选择此标记，您的应用程序将自动更新以使用OpenShift上可用的最新版MariaDB，包括主要版本更新。",
+              "description": "在CentOS 7上提供MariaDB数据库。有关使用此数据库镜像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/mariadb-container/tree/master/10.2/README.md.\n\nWARNING ：通过选择此标记，您的应用程序将自动更新以使用OpenShift上可用的最新版MariaDB，包括主要版本更新。",
               "iconClass": "icon-mariadb",
               "openshift.io/display-name": "MariaDB (Latest)",
               "openshift.io/provider-display-name": "Red Hat, Inc.",
@@ -81,7 +81,7 @@
           },
           {
             "annotations": {
-              "description": "在CentOS 7上提供MariaDB 10.2数据库。有关使用此数据库映像（包括OpenShift注意事项）的详细信息，请参阅https://github.com/sclorg/mariadb-container/tree/master/10.2/README.md。",
+              "description": "在CentOS 7上提供MariaDB 10.2数据库。有关使用此数据库镜像（包括OpenShift注意事项）的详细信息，请参阅https://github.com/sclorg/mariadb-container/tree/master/10.2/README.md。",
               "iconClass": "icon-mariadb",
               "openshift.io/display-name": "MariaDB 10.2",
               "openshift.io/provider-display-name": "Red Hat, Inc.",
@@ -113,7 +113,7 @@
         "tags": [
           {
             "annotations": {
-              "description": "在CentOS 7上提供MongoDB数据库。有关使用此数据库映像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/mongodb-container/tree/master/3.4/README.md.\n\nWARNING ：通过选择此标记，您的应用程序将自动更新以使用OpenShift上可用的最新版MongoDB，包括主要版本更新。",
+              "description": "在CentOS 7上提供MongoDB数据库。有关使用此数据库镜像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/mongodb-container/tree/master/3.4/README.md.\n\nWARNING ：通过选择此标记，您的应用程序将自动更新以使用OpenShift上可用的最新版MongoDB，包括主要版本更新。",
               "iconClass": "icon-mongodb",
               "openshift.io/display-name": "MongoDB (Latest)",
               "openshift.io/provider-display-name": "Red Hat, Inc.",
@@ -130,7 +130,7 @@
           },
           {
             "annotations": {
-              "description": "Provides a MongoDB 3.4 database on CentOS 7. For more information about using this database image, including OpenShift considerations, see https://github.com/sclorg/mongodb-container/tree/master/3.4/README.md.",
+              "description": "在CentOS 7上提供MongoDB 3.4数据库。有关使用此数据库镜像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/mongodb-container/tree/master/3.4/README.md。",
               "iconClass": "icon-mongodb",
               "openshift.io/display-name": "MongoDB 3.4",
               "openshift.io/provider-display-name": "Red Hat, Inc.",
@@ -162,7 +162,7 @@
         "tags": [
           {
             "annotations": {
-              "description": "在CentOS 7上提供MySQL数据库。有关使用此数据库映像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/mysql-container/tree/master/5.6/README.md.\n\nWARNING：通过选择此标记，您的应用程序将自动更新以使用OpenShift上可用的最新MySQL版本，包括主要版本更新。",
+              "description": "在CentOS 7上提供MySQL数据库。有关使用此数据库镜像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/mysql-container/tree/master/5.6/README.md.\n\nWARNING：通过选择此标记，您的应用程序将自动更新以使用OpenShift上可用的最新MySQL版本，包括主要版本更新。",
               "iconClass": "icon-mysql-database",
               "openshift.io/display-name": "MySQL (Latest)",
               "openshift.io/provider-display-name": "Red Hat, Inc.",
@@ -179,7 +179,7 @@
           },
           {
             "annotations": {
-              "description": "在CentOS 7上提供MySQL 5.7数据库。有关使用此数据库映像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/mysql-container/tree/master/5.7/README.md。",
+              "description": "在CentOS 7上提供MySQL 5.7数据库。有关使用此数据库镜像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/mysql-container/tree/master/5.7/README.md。",
               "iconClass": "icon-mysql-database",
               "openshift.io/display-name": "MySQL 5.7",
               "openshift.io/provider-display-name": "Red Hat, Inc.",
@@ -211,7 +211,7 @@
         "tags": [
           {
             "annotations": {
-              "description": "在CentOS 7上提供PostgreSQL数据库。有关使用此数据库映像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/postgresql-container/tree/master/9.6/README.md.\n\nWARNING ：通过选择此标记，您的应用程序将自动更新以使用OpenShift上可用的最新版PostgreSQL，包括主要版本更新。",
+              "description": "在CentOS 7上提供PostgreSQL数据库。有关使用此数据库镜像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/postgresql-container/tree/master/9.6/README.md.\n\nWARNING ：通过选择此标记，您的应用程序将自动更新以使用OpenShift上可用的最新版PostgreSQL，包括主要版本更新。",
               "iconClass": "icon-postgresql",
               "openshift.io/display-name": "PostgreSQL (Latest)",
               "openshift.io/provider-display-name": "Red Hat, Inc.",
@@ -228,7 +228,7 @@
           },
           {
             "annotations": {
-              "description": "在CentOS 7上提供PostgreSQL 9.6数据库。有关使用此数据库映像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/postgresql-container/tree/master/9.6/README.md。",
+              "description": "在CentOS 7上提供PostgreSQL 9.6数据库。有关使用此数据库镜像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/postgresql-container/tree/master/9.6/README.md。",
               "iconClass": "icon-postgresql",
               "openshift.io/display-name": "PostgreSQL 9.6",
               "openshift.io/provider-display-name": "Red Hat, Inc.",
@@ -260,7 +260,7 @@
         "tags": [
           {
             "annotations": {
-              "description": "在CentOS 7上提供Redis数据库。有关使用此数据库映像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/redis-container/tree/master/3.2/README.md.\n\nWARNING ：通过选择此标记，您的应用程序将自动更新以使用OpenShift上可用的最新版Redis，包括主要版本更新。",
+              "description": "在CentOS 7上提供Redis数据库。有关使用此数据库镜像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/redis-container/tree/master/3.2/README.md.\n\nWARNING ：通过选择此标记，您的应用程序将自动更新以使用OpenShift上可用的最新版Redis，包括主要版本更新。",
               "iconClass": "icon-redis",
               "openshift.io/display-name": "Redis (Latest)",
               "openshift.io/provider-display-name": "Red Hat, Inc.",
@@ -277,7 +277,7 @@
           },
           {
             "annotations": {
-              "description": "在CentOS 7上提供Redis 3.2数据库。有关使用此数据库映像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/redis-container/tree/master/3.2/README.md。",
+              "description": "在CentOS 7上提供Redis 3.2数据库。有关使用此数据库镜像的更多信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/redis-container/tree/master/3.2/README.md。",
               "iconClass": "icon-redis",
               "openshift.io/display-name": "Redis 3.2",
               "openshift.io/provider-display-name": "Red Hat, Inc.",
