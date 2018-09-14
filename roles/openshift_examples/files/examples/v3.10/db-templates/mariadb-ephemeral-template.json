@@ -201,7 +201,7 @@
             "displayName": "Memory Limit",
             "name": "MEMORY_LIMIT",
             "required": true,
-            "value": "512Mi"
+            "value": "0Mi"
         },
         {
             "description": "ImageStream所在的OpenShift命名空间。",

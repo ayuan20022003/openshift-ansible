@@ -294,7 +294,7 @@
             "description": "容器可以使用的最大内存量。",
             "displayName": "Memory Limit",
             "name": "MEMORY_LIMIT",
-            "value": "512Mi"
+            "value": "0Mi"
         },
         {
             "description": "可用于数据的卷空间，例如512Mi，2Gi。",

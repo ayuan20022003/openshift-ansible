@@ -220,7 +220,7 @@
             "displayName": "Memory Limit",
             "name": "MEMORY_LIMIT",
             "required": true,
-            "value": "512Mi"
+            "value": "0Mi"
         },
         {
             "description": "ImageStream所在的OpenShift命名空间。",
@@ -267,11 +267,11 @@
             "required": true
         },
         {
-            "description": "要使用的MongoDB镜像版本（2.4,2.6,3.2或最新版本）。",
+            "description": "要使用的MongoDB镜像版本（3.4 或 latest）。",
             "displayName": "Version of MongoDB Image",
             "name": "MONGODB_VERSION",
             "required": true,
-            "value": "3.2"
+            "value": "3.4"
         }
     ]
 }
