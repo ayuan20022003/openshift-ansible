@@ -45,6 +45,19 @@
       when:
       - _vm_max_map_count.stdout | default(0) | int < 262144 | int or _curr_vm_max_map_count.stdout | default(0) | int < 262144
 
+- name: Ensure that es storage path exists and permissions are correct
+  hosts: oo_infras_to_config
+  gather_facts: false
+  tasks:
+  - when:
+    - openshift_logging_elasticsearch_storage_type == "hostmount"
+    block:
+    - name: Create es storage directory
+      file:
+        path: "{{ openshift_logging_elasticsearch_hostmount_path }}"
+        state: directory
+        mode: 0777
+
 - name: OpenShift Aggregated Logging
   hosts: oo_first_master
   roles:

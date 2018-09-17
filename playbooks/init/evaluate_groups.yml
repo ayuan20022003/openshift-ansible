@@ -27,6 +27,11 @@
       msg: This playbook requires g_lb_hosts to be set
     when: g_lb_hosts is not defined
 
+  - name: Evaluate groups - g_infra_hosts required
+    fail:
+      msg: This playbook requires g_infra_hosts to be set
+    when: g_infra_hosts is not defined
+
   - name: Evaluate groups - g_nfs_hosts required
     fail:
       msg: This playbook requires g_nfs_hosts to be set
@@ -49,6 +54,24 @@
       ansible_ssh_user: "{{ g_ssh_user | default(omit) }}"
       ansible_become: "{{ g_sudo | default(omit) }}"
     with_items: "{{ g_all_hosts | default([]) }}"
+    changed_when: no
+
+  - name: Evaluate oo_infras
+    add_host:
+      name: "{{ item }}"
+      groups: oo_infras
+      ansible_ssh_user: "{{ g_ssh_user | default(omit) }}"
+      ansible_become: "{{ g_sudo | default(omit) }}"
+    with_items: "{{ g_infra_hosts | union(g_new_infra_hosts) | default([]) }}"
+    changed_when: no
+
+  - name: Evaluate oo_infras_to_config
+    add_host:
+      name: "{{ item }}"
+      groups: oo_infras_to_config
+      ansible_ssh_user: "{{ g_ssh_user | default(omit) }}"
+      ansible_become: "{{ g_sudo | default(omit) }}"
+    with_items: "{{ g_new_infra_hosts | default(g_infra_hosts | default([], true), true) }}"
     changed_when: no
 
   - name: Evaluate oo_masters
