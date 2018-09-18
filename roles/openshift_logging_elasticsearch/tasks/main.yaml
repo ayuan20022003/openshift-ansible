@@ -99,6 +99,15 @@
     resource_name: system:auth-delegator
     user: "system:serviceaccount:{{ openshift_logging_elasticsearch_namespace}}:aggregated-logging-elasticsearch"
 
+- name: Add scc privileged to es sa
+  when: openshift_logging_elasticsearch_storage_type == 'hostmount'
+  oc_adm_policy_user:
+    user: "system:serviceaccount:{{ openshift_logging_elasticsearch_namespace }}:aggregated-logging-elasticsearch"
+    namespace: "{{ openshift_logging_elasticsearch_namespace }}"
+    resource_kind: scc
+    resource_name: privileged
+    state: present
+
 # logging-metrics-reader role
 - template:
     src: "{{ __base_file_dir }}/logging-metrics-role.j2"
