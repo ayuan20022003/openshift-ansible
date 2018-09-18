@@ -173,6 +173,9 @@ spec:
             readOnly: true
           resources:
             limits:
+{% if openshift_logging_elasticsearch_proxy_cpu_limit is defined and es_proxy_cpu_limit is not none and openshift_logging_elasticsearch_proxy_cpu_limit != '' %}
+              cpu: "{{ openshift_logging_elasticsearch_proxy_cpu_limit }}"
+{% endif %}
               memory: "{{openshift_logging_elasticsearch_proxy_memory_limit }}"
             requests:
               cpu: "{{openshift_logging_elasticsearch_proxy_cpu_request }}"
