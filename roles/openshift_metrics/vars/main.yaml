@@ -9,3 +9,4 @@ openshift_metrics_cassandra_storage_types:
 - pv
 - dynamic
 - nfs
+- hostmount

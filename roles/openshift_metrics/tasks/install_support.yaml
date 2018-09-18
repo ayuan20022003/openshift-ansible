@@ -23,3 +23,12 @@
 - include_tasks: generate_serviceaccounts.yaml
 - include_tasks: generate_services.yaml
 - include_tasks: generate_rolebindings.yaml
+
+- name: Add scc privileged to cassandra sa
+  when: openshift_metrics_cassandra_storage_type == 'hostmount'
+  oc_adm_policy_user:
+    user: "system:serviceaccount:{{ openshift_metrics_project }}:cassandra"
+    namespace: "{{ openshift_metrics_project }}"
+    resource_kind: scc
+    resource_name: hostmount-anyuid
+    state: present
