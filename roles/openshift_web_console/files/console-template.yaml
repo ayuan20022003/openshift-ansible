@@ -83,6 +83,9 @@ objects:
                     exit 1; \
                   fi && curl -k -f https://0.0.0.0:8443/console/
           resources:
+            limits:
+              cpu: 200m
+              memory: 200Mi
             requests:
               cpu: 100m
               memory: 100Mi
