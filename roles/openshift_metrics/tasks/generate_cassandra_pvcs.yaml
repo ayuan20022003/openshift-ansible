@@ -28,6 +28,7 @@
       when:
         - openshift_metrics_cassandra_storage_type != 'emptydir'
         - openshift_metrics_cassandra_storage_type != 'dynamic'
+        - openshift_metrics_cassandra_storage_type != 'hostmount'
       changed_when: false
 
     - name: generate hawkular-cassandra persistent volume claims (dynamic)
