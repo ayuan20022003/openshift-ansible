@@ -4,7 +4,7 @@
     "labels": {
         "template": "mongodb-ephemeral-template"
     },
-    "message": "The following service(s) have been created in your project: ${DATABASE_SERVICE_NAME}.\n\n       Username: ${MONGODB_USER}\n       Password: ${MONGODB_PASSWORD}\n  Database Name: ${MONGODB_DATABASE}\n Connection URL: mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@${DATABASE_SERVICE_NAME}/${MONGODB_DATABASE}\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/mongodb-container/blob/master/3.2/README.md.",
+    "message": "您的项目中已创建以下服务：$ {DATABASE_SERVICE_NAME}。\n \n用户名：$ {MONGODB_USER} \n密码：$ {MONGODB_PASSWORD} \n数据库名称：$ {MONGODB_DATABASE} \n连接URL： mongodb：// $ {MONGODB_USER}：$ {MONGODB_PASSWORD} @ $ {DATABASE_SERVICE_NAME} / $ {MONGODB_DATABASE} \n \n有关使用此模板的详细信息，包括OpenShift注意事项，请参阅https://github.com/sclorg/mongodb -container /斑点/主/ 3.2 / README.md。",
     "metadata": {
         "annotations": {
             "description": "MongoDB数据库服务，没有持久存储。有关使用此模板的详细信息（包括OpenShift注意事项），请参阅https://github.com/sclorg/mongodb-container/blob/master/3.2/README.md.\n\n警告：存储的任何数据都将丢失破坏。仅使用此模板进行测试",
