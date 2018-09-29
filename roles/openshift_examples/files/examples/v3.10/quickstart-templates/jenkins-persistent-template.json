@@ -5,7 +5,7 @@
         "app": "jenkins-persistent",
         "template": "jenkins-persistent-template"
     },
-    "message": "A Jenkins service has been created in your project.  Log into Jenkins with your OpenShift account.  The tutorial at https://github.com/openshift/origin/blob/master/examples/jenkins/README.md contains more information about using this template.",
+    "message": "已在项目中创建Jenkins服务。使用您的OpenShift帐户登录Jenkins。 https://github.com/openshift/origin/blob/master/examples/jenkins/README.md上的教程包含有关使用此模板的更多信息。",
     "metadata": {
         "annotations": {
             "description": "Jenkins服务，具有持久存储。\n \n注意：群集中必须有持久卷才能使用此模板。",
